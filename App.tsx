@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import SplasScreen from './src/components/pages/SplashScreen';
+import BottomTab from './src/navigators/BottomTab';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,11 +21,9 @@ function App(): JSX.Element {
   }
 
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Hola mundo</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <BottomTab />
+    </NavigationContainer>
   );
 }
 
