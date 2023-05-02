@@ -8,7 +8,7 @@ type props = {
 const SimpleTemplate = ({children}: props) => {
   return (
     <View style={styles.container}>
-      <StatusBar animated={true} backgroundColor="#1E1E1E" hidden={false} />
+      <StatusBar animated={true} backgroundColor="#242A32" hidden={false} />
       {children}
     </View>
   );
@@ -19,9 +19,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1E1E1E',
+    backgroundColor: '#242A32',
   },
 });
 
-//make this component available to the app
 export default SimpleTemplate;
