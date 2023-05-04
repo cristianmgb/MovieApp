@@ -17,6 +17,10 @@ export const store = configureStore({
     movieCast: MovieCastReducer,
     movieReview: MovieReviewReducer,
   },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
