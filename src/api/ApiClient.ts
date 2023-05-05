@@ -8,6 +8,8 @@ export const NOW_PLAYING = '/now_playing';
 export const UPCOMING = '/upcoming';
 export const TOP_RATED = '/top_rated';
 
+export const IMAGE_RESOURCE = 'https://image.tmdb.org/t/p/w500';
+
 const API_KEY = '?api_key=9ab54deb09e30c7f062f23fb2967a540';
 
 class ApiClient {

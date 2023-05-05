@@ -5,7 +5,7 @@ type props = {
   children: ReactNode;
 };
 
-const SimpleTemplate = ({children}: props) => {
+const DetailTemplate = ({children}: props) => {
   return (
     <View style={styles.container}>
       <StatusBar animated={true} backgroundColor="#242A32" hidden={false} />
@@ -17,10 +17,8 @@ const SimpleTemplate = ({children}: props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#242A32',
   },
 });
 
-export default SimpleTemplate;
+export default DetailTemplate;

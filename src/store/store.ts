@@ -6,6 +6,8 @@ import NowPlayingMovieReducer from './feature/nowPlayingMovieSlice';
 import MovieIdReducer from './feature/movieIdSlice';
 import MovieCastReducer from './feature/movieCastSlice';
 import MovieReviewReducer from './feature/movieReviewSlice';
+import MovieDetailReducer from './feature/movieDetailSlice';
+import MovieSearchReducer from './feature/searchMovieSlice';
 
 export const store = configureStore({
   reducer: {
@@ -16,7 +18,13 @@ export const store = configureStore({
     movieId: MovieIdReducer,
     movieCast: MovieCastReducer,
     movieReview: MovieReviewReducer,
+    movieDetail: MovieDetailReducer,
+    searchMovie: MovieSearchReducer,
   },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

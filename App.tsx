@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {Provider} from 'react-redux';
 import {store} from './src/store/store';
 import SplasScreen from './src/components/pages/SplashScreen';
-import BottomTab from './src/navigators/BottomTab';
+import StackNavigation from './src/navigators/StackNavigation';
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +25,7 @@ function App(): JSX.Element {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <BottomTab />
+        <StackNavigation />
       </NavigationContainer>
     </Provider>
   );

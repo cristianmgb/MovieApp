@@ -1,11 +1,13 @@
 import React from 'react';
-import {Text} from 'react-native';
 import SimpleTemplate from '../templates/SimpleTemplate';
+import HeaderSearch from '../organisms/HeaderSearch';
+import {ResultSearch} from '../organisms/ResultSearch';
 
 const Search = () => {
   return (
     <SimpleTemplate>
-      <Text>Search</Text>
+      <HeaderSearch />
+      <ResultSearch />
     </SimpleTemplate>
   );
 };
