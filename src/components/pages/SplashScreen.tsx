@@ -1,9 +1,10 @@
 import React from 'react';
-import {Image, View, StyleSheet} from 'react-native';
+import {Image, View, StyleSheet, StatusBar} from 'react-native';
 
 const SplasScreen = () => {
   return (
     <View style={styles.container}>
+      <StatusBar animated={true} backgroundColor="#242A32" hidden={false} />
       <Image style={styles.img} source={require('../../assets/popcorn.png')} />
     </View>
   );

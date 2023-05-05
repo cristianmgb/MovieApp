@@ -19,7 +19,7 @@ export const ItemMovie = ({item, width, height, space}: props) => {
   const dispatch = useDispatch();
 
   const goToDetails = () => {
-    dispatch(onSetMovieId(item.id));
+    dispatch(onSetMovieId({movieId: item.id}));
     navigation.navigate('Detail');
   };
 

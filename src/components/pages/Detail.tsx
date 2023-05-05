@@ -1,25 +1,25 @@
-//import liraries
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect} from 'react';
+import {useDetailMovie} from '../../hooks/useDetailMovie';
+import Header from '../organisms/Header';
+import {Description} from '../molecules/Description';
+import {TabDetail} from '../organisms/TabDetails';
+import DetailTemplate from '../templates/SimpleTemplate';
 
-// create a component
 const Detail = () => {
+  const detailMovie = useDetailMovie();
+
+  useEffect(() => {
+    detailMovie();
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Detail</Text>
-    </View>
+    <DetailTemplate>
+      <Header />
+      <Description />
+      <TabDetail />
+    </DetailTemplate>
   );
 };
 
-// define your styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#2c3e50',
-  },
-});
-
-//make this component available to the app
 export default Detail;
